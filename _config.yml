@@ -1,0 +1,6 @@
+# Jekyll Configuration
+title: Personal Website
+description: A personal website for photography, blogs, and resume
+baseurl: ""
+url: "https://your-github-username.github.io"
+theme: minima

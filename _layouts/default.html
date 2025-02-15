@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link href="{{ '/assets/styles/tailwind.css' | relative_url }}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="p-4 bg-gray-900 text-white flex justify-between">
+        <a href="/" class="text-lg font-bold">My Website</a>
+        <div>
+            <a href="/gallery" class="mx-2">Photography</a>
+            <a href="/blogs" class="mx-2">Blogs</a>
+            <a href="/resume" class="mx-2">Resume</a>
+        </div>
+    </nav>
+    <div class="container mx-auto p-6">
+        {{ content }}
+    </div>
+
+    <script type="text/babel">
+        ReactDOM.render(<Gallery />, document.getElementById('gallery-root'));
+        ReactDOM.render(<Blog />, document.getElementById('blog-root'));
+        ReactDOM.render(<Resume />, document.getElementById('resume-root'));
+    </script>
+</body>
+</html>
